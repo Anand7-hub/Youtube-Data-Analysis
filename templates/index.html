@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css"> <!-- Link to your CSS -->
+    <title>YouTube Data Analysis</title>
+</head>
+<body>
+    <body style="background-image: url('static/photo.png'); background-size:cover ; background-position: center; margin: 0;"></body>
+
+    <div class="navbar">
+        <img src="static/youtube_logo.png" alt="Logo" class="logo"> <!-- Replace with your logo path -->
+    </div>
+
+    <div class="title-section">
+        <h1>YouTube Data Analysis</h1> <!-- Title -->
+    </div>
+
+    <div class="search-bar-container">
+        <select id="category-select">
+            <option value="all">Choose Category</option>
+            <option value="vlogs">Vlogs</option>
+            <option value="travel">Travel</option>
+            <option value="food">Food</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="songs">Songs</option>
+        </select>
+        <button onclick="search()">Search</button>
+    </div>
+
+    <div class="content">
+        <!-- Add your main content here -->
+    </div>
+
+    <script>
+        function search() {
+            const category = document.getElementById('category-select').value;
+            window.location.href = `/analyze?category=${category}`; // Update the URL based on selection
+        }
+    </script>
+</body>
+</html>
